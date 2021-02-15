@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="animation.css">
+<style>
+    img {display: block; margin: 0px auto; width: auto; height: 25%;}
+</style>
+</head>
+<body style = "background: white">
+    <div class = "fade-in-box" align = "center" id = "board"></div>
+</body>
+<script>
+    var set = setInterval(function makeimg(){
+        var img = document.createElement('img');
+        img.src = "index_image1.png";
+        //img.width = "100%";
+        //img.height = "200";
+        document.getElementById('board').appendChild(img);
+    }, 300)
+    setTimeout(function() {
+        clearTimeout(set);
+    },1201);
+    setTimeout(function del(){
+        document.getElementById('board').innerHTML = '';
+        location.href="index_next.html";
+    },1705)
+    
+</script>
+</html>

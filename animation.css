@@ -1,0 +1,32 @@
+.fade-in-box {
+    display: block;
+    background: white;
+    padding: 10px;
+    animation: fadein 5s;
+    -webkit-animation: fadein 5s; /* Safari and Chrome */
+  }
+  .fade-in-box2 {
+    display: block;
+    background: white;
+    animation: fadein 3s;
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+  }
+
+  @keyframes fadein {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+  @-webkit-keyframes fadein { /* Safari and Chrome */
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
