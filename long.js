@@ -84,7 +84,6 @@ function sudmit(){
             }
         }
     }
-    alert(data)
     location.href = "complete.html?" + data;
     
 }
