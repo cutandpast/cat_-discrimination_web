@@ -47,20 +47,22 @@ function sudmit(){
         }else if(head > 3){
             if(cute > 3){
                 var data = 1;//scotish
-            }else if(energy < 4){
+            }else if(energy < 3){
                 var data = 12; //british
             }else if(g > 3){
                 var data = 2; //persian
+            }else{
+                var data = Math.floor(Math.random() * 2) + 1;
             }
         }else{
-            if(energy >3){
+            if(energy > 3){
                 if(curiosity < 3){
                     var data = 10; //bangol
                 }else{
                     var data = 4; //tukish
                 }
-            }else if(curiosity > 3 && energy > 3){
-                if(cute > 3){
+            }else if(curiosity > 3 && energy > 2){
+                if(cute > 2){
                     var data = 9; //munchkin
                 }else{
                     var data = 5; //regdoll
@@ -70,18 +72,13 @@ function sudmit(){
                     var data = 3; //northway
                 }else if(curiosity > 3){
                     var data = 7; //russian blue
+                }else{
+                    var data = 2; //persian
                 }
             }else if(food >3 && vary > 4){
                 var data = 12; //korean
             }else if(energy > 3){
                 var data = Math.floor(Math.random() * 3) + 3;
-            }else if(energy <= 3){
-                var data = Math.floor(Math.random() * 2) + 1;
-                if(data == 0){
-                    data = 7;
-                }else{
-                    data = 11;
-                }
             }else{
                 var data = Math.floor(Math.random() * 13) + 1;
             }
