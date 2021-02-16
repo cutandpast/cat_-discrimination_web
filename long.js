@@ -12,8 +12,6 @@ function sudmit(){
     var j = bigid.jj.value;
     var k = bigid.kk.value;
 
-    var head = Number(0);
-    var inssa = Number(0); 
     var gg = Number(0); 
     var energy = Number(0); 
     var curiosity = Number(0); 
@@ -21,61 +19,75 @@ function sudmit(){
     var greed = Number(0); 
     var cute = Number(0); 
     var vary = Number(0); 
-
-    inssa += Number(a);
+    var head = Number(0);
+    
     energy += Number(a);
     food += Number(b);
     greed += Number(c);
     gg += Number(d);
-    inssa += Number(e);
     curiosity += Number(e);
     energy += Number(f);
-    inssa -= Number(g);
+    energy -= Number(g);
     vary += Number(h);
     head += Number(i);
     cute += Number(j);
+
     
-    
-    
-    if(gg > 3){
-        var data = 8;
+    if(gg > 4){
+        var data = 8; //serval
+    }else if(food > 4){
+        var data = 12; //korean
     }else if(greed > 4){
-        var data = 6;
-    }else if(energy > 5){
-        var data = 10;
+        var data = 6; //american
+    }else if(energy < 1){
+        var data = 11; //british
     }else{
-        if(vary>4){
-            var data = 12;
+        if(gg > 3 && energy > 4){
+            var data = 8; //serval
+        }else if(head > 3){
+            if(cute > 3){
+                var data = 1;//scotish
+            }else if(energy < 4){
+                var data = 12; //british
+            }else if(g > 3){
+                var data = 2; //persian
+            }
         }else{
-            if(head > 3){
-                if(cute >= 3){
-                    var data = 1;
-                }else if(energy < 3){
-                    var data = 11;
+            if(energy >3){
+                if(curiosity < 3){
+                    var data = 10; //bangol
                 }else{
-                    var data = 2;
+                    var data = 4; //tukish
                 }
-            }else if(greed > 3){
-                var data = 6;
-            }else if(food > 3){
-                var data = 12;
-            }else if(inssa > 3){
-                if(curiosity > 3){
-                    var data = 4;
-                }else if(cute >= 3){
-                    var data = 9;
-                }else if(energy >= 3){
-                    var data = 10;
-                }else if(energy < 3){
-                    var data = 3;
+            }else if(curiosity > 3 && energy > 3){
+                if(cute > 3){
+                    var data = 9; //munchkin
                 }else{
-                    var data = 5;
+                    var data = 5; //regdoll
+                }
+            }else if(g>2){
+                if(energy > 3){
+                    var data = 3; //northway
+                }else if(curiosity > 3){
+                    var data = 7; //russian blue
+                }
+            }else if(food >3 && vary > 4){
+                var data = 12; //korean
+            }else if(energy > 3){
+                var data = Math.floor(Math.random() * 3) + 3;
+            }else if(energy <= 3){
+                var data = Math.floor(Math.random() * 2) + 1;
+                if(data == 0){
+                    data = 7;
+                }else{
+                    data = 11;
                 }
             }else{
-                var data = 7;
+                var data = Math.floor(Math.random() * 13) + 1;
             }
         }
     }
-    window.location.href = "complete.html?" + data;
+    
+    location.href = "complete.html?" + data;
     
 }
