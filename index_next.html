@@ -46,8 +46,8 @@
         var down = 0;
         var up = 0;
         function frame() {
-            down += ((600-down)/3.3);
-            up -= ((600-down)/3.3);
+            down += 7
+            up -= 7
             img1.style.setProperty('transform', 'translateY(' + down + 'px)');
             img2.style.setProperty('transform', 'translateY(' + up + 'px)');
             window.requestAnimationFrame(frame);
